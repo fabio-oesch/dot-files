@@ -1,0 +1,33 @@
+#! /bin/sh
+
+# set keyboardlayout before running sxhkd for keybindings at dvorak keys
+setxkbmap dvorak
+
+sxhkd &
+
+bspc monitor eDP1 -d 1 2 3 4 5 6 7
+bspc monitor HDMI1 -d 8 9
+
+bspc config border_width        2
+bspc config window_gap          5
+bspc config top_padding         2
+bspc config left_padding        2
+bspc config right_padding       2
+#bspc config bottom_padding      15
+bspc config bottom_padding      2
+
+bspc config split_ratio          0.5
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+bspc config click_to_focus       true
+
+# set color
+bspc config active_border_color '#d65d0e'
+bspc config focused_border_color '#d65d0e'
+
+#bspc rule -a Firefox desktop='^1'
+bspc rule -a spotify desktop='^4'
+bspc rule -a intellij desktop='^3'
+bspc rule -a pycharm desktop='^3'
+bspc rule -a phpstorm desktop='^3'
+bspc rule -a Emacs state=tiled
