@@ -30,7 +30,7 @@
  '(menu-bar-mode nil)
  '(package-selected-packages
    (quote
-    (evil-org neotree elpy ac-math auto-complete-auctex auto-complete auctex helm all-the-icons use-package evil-magit smart-mode-line magit gruvbox-theme evil)))
+    (neotree elpy ac-math auto-complete-auctex auto-complete auctex helm all-the-icons use-package evil-magit smart-mode-line magit gruvbox-theme evil)))
  '(scroll-bar-mode nil)
  '(tool-bar-mode nil))
 (custom-set-faces
@@ -99,12 +99,4 @@
 (evil-define-key 'normal neotree-mode-map (kbd "SPC") 'neotree-quick-look)
 (evil-define-key 'normal neotree-mode-map (kbd "q") 'neotree-hide)
 (evil-define-key 'normal neotree-mode-map (kbd "RET") 'neotree-enter)
-
-;; evil org mode
-(require 'evil-org)
-(add-hook 'org-mode-hook 'evil-org-mode)
-(evil-org-set-key-theme '(navigation insert textobjects additional calendar))
-(require 'evil-org-agenda)
-(evil-org-agenda-set-keys)
-(add-hook 'org-mode-hook #'toggle-word-wrap)
 

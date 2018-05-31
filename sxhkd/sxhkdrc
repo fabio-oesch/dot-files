@@ -39,9 +39,9 @@ super + space
   rofi -show run
 	#dmenu_run
 
-# window browser
-alt + Tab
-  rofi -show window
+# window browser -- interferes with emacs
+# alt + Tab
+#  rofi -show window
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -73,7 +73,7 @@ super + shift + F1
 
 # reboot laptop
 super + shift + F2
-    betterlockscreen -l && systemctl suspend
+    betterlockscreen -s
 
 # reboot laptop
 super + shift + F3
