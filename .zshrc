@@ -60,9 +60,6 @@ prompt_zsh_battery() {
     echo "$symbol $bat%%  $bat1%% "
 }
 
-
-
-
 zsh_internet_signal() {
     local signal=`nmcli -f ACTIVE,SIGNAL dev wifi list | awk '$1=="yes" {print $2}'`
     local SNR=$signal
@@ -229,6 +226,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+
 export EDITOR=/usr/bin/vim
 export XDG_CONFIG_HOME=~/.config
 export PATH=$PATH:/home/olearry/.gem/ruby/2.4.0/bin
@@ -246,7 +244,9 @@ alias pip2install='pip install lxml --user'
 alias unidb='ssh zdac124@teaching.cim.rhul.ac.uk -L 5432:teachdb:5432'
 alias unipsql='psql -h localhost CS2855/zdac124 -U zdac124'
 alias umlet='java -jar ~/Documents/software/Umlet/umlet.jar'
-alias digitaloceanssh='ssh root@165.227.232.65'
+alias digitaloceanssh='ssh root@138.68.140.44'
+alias digitaloceangui='ssh -X root@138.68.140.44'
+alias tracing='sudo python ~/dev/Urop/fabio-oesch_system_provenance_collection/main.py'
 
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
