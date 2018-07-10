@@ -244,8 +244,6 @@ alias pip2install='pip install lxml --user'
 alias unidb='ssh zdac124@teaching.cim.rhul.ac.uk -L 5432:teachdb:5432'
 alias unipsql='psql -h localhost CS2855/zdac124 -U zdac124'
 alias umlet='java -jar ~/Documents/software/Umlet/umlet.jar'
-alias digitaloceanssh='ssh root@138.68.140.44'
-alias digitaloceangui='ssh -X root@138.68.140.44'
 alias tracing='sudo python ~/dev/Urop/fabio-oesch_system_provenance_collection/main.py'
 
 
