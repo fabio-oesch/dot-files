@@ -30,7 +30,7 @@
  '(menu-bar-mode nil)
  '(package-selected-packages
    (quote
-    (evil-org neotree elpy ac-math auto-complete-auctex auto-complete auctex helm all-the-icons use-package evil-magit smart-mode-line magit gruvbox-theme evil)))
+    (elpygen evil-org neotree elpy ac-math auto-complete-auctex auto-complete auctex helm all-the-icons use-package evil-magit smart-mode-line magit gruvbox-theme evil)))
  '(scroll-bar-mode nil)
  '(tool-bar-mode nil))
 (custom-set-faces

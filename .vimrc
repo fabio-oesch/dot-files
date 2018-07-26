@@ -19,8 +19,8 @@ Plugin 'flazz/vim-colorschemes'
 
 " Python Plugins
 " Plugin 'vim-scripts/indentpython.vim'
-" Plugin 'davidhalter/jedi-vim'
-" Plugin 'Valloric/YouCompleteMe'
+Plugin 'davidhalter/jedi-vim'
+Plugin 'Valloric/YouCompleteMe'
 " Plugin 'scrooloose/syntastic'
 " Plugin 'nvie/vim-flake8'
 
