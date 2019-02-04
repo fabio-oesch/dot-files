@@ -177,6 +177,6 @@ super + {Left,Down,Up,Right}
 ctrl + alt + p
     notify-send PGKUpg "`$HOME/Documents/Scripts/pkg.sh`"
 ctrl + alt + t
-    notify-send Time "`date +%R`"
+    notify-send Time "`date +'%T %D'`"
 ctrl + alt + s
     $HOME/Documents/Scripts/status.sh

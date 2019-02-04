@@ -33,7 +33,16 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
 fi
 
 # swap escape and caps keys
+# setxkbmap -option caps:swapescape
 setxkbmap -option ctrl:swapcaps
+
+# In .Xmodmap Escape -> caps, caps -> ctrl, ctrl -> escape
+# [[ -f ~/.Xmodmap ]] && xmodmap ~/.Xmodmap
+# remove Lock = Caps_Lock
+# keysym  Control_L = Caps_Lock
+# keysym Caps_Lock = Escape
+# keysym  Escape = Control_L
+# add Lock = Caps_Lock
 
 # turn off x window blacking
 xset -dpms
@@ -61,13 +70,13 @@ dropboxd &
 # dunst &
 
 # set wallpaper
-feh --bg-scale ~/Pictures/NQp8ofd.jpg &
+feh --bg-scale ~/Pictures/fox.png &
 
 # start compton
 compton &
 
 # start redshift
-redshift &
+redshift -l 51.43004:-0.569947 &
 
 # start window manager
 #exec i3
