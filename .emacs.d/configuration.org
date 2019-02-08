@@ -433,7 +433,40 @@
        :diminish flycheck-mode)
    #+END_SRC
 
-Add =flycheck= help to write better English
+Add =flycheck= help to write better English. The website can be found [[https://www.macs.hw.ac.uk/~rs46/posts/2018-12-29-textlint-flycheck.html][here]].
+The steps are as follows:
+  1. Install npx
+  #+BEGIN_SRC bash :eval no
+   sudo npm install -g npx
+  #+END_SRC
+  2. Install the rest of the =npm= dependencies
+  #+BEGIN_SRC bash :eval no
+    npm install textlint write-good textlint-plugin-latex textlint-rule-write-good
+    textlint-rule-no-start-duplicated-conjunction textlint-rule-max-comma
+    textlint-rule-terminology textlint-rule-period-in-list-item
+    textlint-rule-unexpanded-acronym textlint-rule-abbr-within-parentheses
+    textlint-rule-alex textlint-rule-common-misspellings
+    textlint-rule-en-max-word-count textlint-rule-diacritics
+    textlint-rule-stop-words
+  #+END_SRC
+  3. Test if it works, create a file with a mistake
+  #+BEGIN_SRC bash
+    echo "Mistakes were made" > file.txt
+  #+END_SRC
+  4. With the following command a warning should be output
+  #+BEGIN_SRC bash
+    npx textlint --rule write-good --rule no-start-duplicated-conjunction --rule
+    max-comma --rule terminology --rule period-in-list-item --rule
+    period-in-list-item --rule unexpanded-acronym --rule abbr-within-parentheses
+    --rule alex --rule common-misspellings --rule en-max-word-count --rule
+    diacritics --rule stop-words file.txt
+  #+END_SRC
+  5. Then the below code can be inserted in =.emacs.d= config file and if
+     =flycheck= has to be installed though.
+
+I should be able to add rules to it. The config path is not correct so far but
+because no textlintrc is even available this should not be such a problem. For
+more info go [[https://github.com/textlint/textlint][here]].
 
    #+BEGIN_SRC emacs-lisp
     (flycheck-define-checker textlint
