@@ -877,6 +877,12 @@ more info go [[https://github.com/textlint/textlint][here]].
      (setq reftex-plug-into-AUCTeX t)
    #+END_SRC
 
+   Add =textlinting= to =tex-chktex=.
+
+   #+BEGIN_SRC emacs-lisp
+     (flycheck-add-next-checker 'tex-chktex '(warning . textlint))
+   #+END_SRC
+
    Automatically parse the file after loading it as well as save it automatically.
 
    #+BEGIN_SRC emacs-lisp
