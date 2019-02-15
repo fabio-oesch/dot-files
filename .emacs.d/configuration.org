@@ -360,13 +360,21 @@
 
 ** Setup splash screen
 
-   The default splash screen is not very useful so it is replaced.
+   When emacs starts it will now start into the inbox file where I want to go at
+   the beginning anyway.
 
    #+BEGIN_SRC emacs-lisp
-     (use-package dashboard
-       :ensure t
-       :config
-       (dashboard-setup-startup-hook))
+     (setq initial-buffer-choice "~/Documents/Dropbox/org/inbox.org")
+   #+END_SRC
+
+   The default splash screen is not very useful so it is replaced. Removed this
+   for the time being because I just want my org-mode file to open.
+
+   #+BEGIN_SRC emacs-lisp
+     ;;(use-package dashboard
+     ;;  :ensure t
+     ;;  :config
+     ;;  (dashboard-setup-startup-hook))
    #+END_SRC
 
 * Project management
