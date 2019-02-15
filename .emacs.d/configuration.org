@@ -917,6 +917,19 @@ more info go [[https://github.com/textlint/textlint][here]].
                  (setq TeX-master t)))
    #+END_SRC
 
+   To count the words in a latex file an external perl script is used.
+
+   #+BEGIN_SRC emacs-lisp
+     (defun learry/latex-word-count ()
+       (interactive)
+       (shell-command (concat "~/Documents/Scripts/texcount.pl "
+         ; "uncomment then options go here "
+         (buffer-file-name))))
+
+     (add-hook 'latex-mode-hook (lambda ()
+       (define-key LaTeX-mode-map "\C-cw" 'learry/latex-word-count)))
+   #+END_SRC
+
 ** Lisps
 
    I like to use =paredit= in Lisp modes to balance parentheses (and more!).
