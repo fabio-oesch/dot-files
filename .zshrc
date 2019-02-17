@@ -2,10 +2,16 @@
 export ZSH=$HOME/.oh-my-zsh
 export TERM=xterm-256color
 
+machine=$(uname -v)
 
 # Theme
-ZSH_THEME="spaceship"
-SPACESHIP_BATTERY_SHOW=always
+if [[ "$machine" =~ "Ubuntu" ]]; then
+  ZSH_THEME="junkfood"
+else
+  ZSH_THEME="spaceship"
+  SPACESHIP_BATTERY_SHOW=always
+fi
+
 
 # Plugins
 plugins=(
