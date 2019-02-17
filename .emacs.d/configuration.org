@@ -36,7 +36,7 @@
   Use [[https://github.com/hrs/sensible-defaults.el][sensible-defaults.el]] for some basic settings. The file can be found [[file:~/dev/elisp/sensible-defaults/sensible-defaults.el][here]].
 
   #+BEGIN_SRC emacs-lisp
-    (load-file "~/dev/elisp/sensible-defaults/sensible-defaults.el")
+    (load-file "./scripts/sensible-defaults.el")
     (sensible-defaults/use-all-settings)
     (sensible-defaults/use-all-keybindings)
     (sensible-defaults/backup-to-temp-directory)
