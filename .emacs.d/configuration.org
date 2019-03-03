@@ -1197,6 +1197,14 @@ more info go [[https://github.com/textlint/textlint][here]].
      (evil-define-key 'normal ensime-mode-map (kbd "M-.") 'ensime-edit-definition)
    #+END_SRC
 
+** Vue
+
+Install vue major mode
+
+    #+BEGIN_SRC emacs-lisp
+      (use-package vue-mode)
+    #+END_SRC
+
 ** =web-mode=
 
    #+BEGIN_SRC emacs-lisp
