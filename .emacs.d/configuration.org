@@ -615,6 +615,12 @@ more info go [[https://github.com/textlint/textlint][here]].
     ;;  (setq compilation-scroll-output t)
   #+END_SRC
 
+  Use cheat.sh to search for top answers in SO.
+
+  #+BEGIN_SRC emacs-lisp
+    (use-package cheat-sh)
+  #+END_SRC
+
 ** Coq
 
    I use =company-coq-mode=, which really helps make Proof General a more useful IDE.
