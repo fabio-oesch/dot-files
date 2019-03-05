@@ -45,6 +45,7 @@ eval $(keychain --eval id_rsa)
 
 # Aliases
 alias lyp='cd ~/dev/Go/src/github.com/RHUL-CS-Projects/FulUnit_1819_FabioOesch/'
+alias holloway='cd ~/Documents/Dropbox/Uni/Holloway/'
 
 # This is the same functionality as fzf's ctrl-t, except that the file or
 # directory selected is now automatically cd'ed or opened, respectively.
