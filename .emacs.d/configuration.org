@@ -323,9 +323,9 @@
                   (floor (/ learry/current-font-size learry/font-change-increment))))
        (learry/set-font-size))
 
-     (define-key global-map (kbd "C-)") 'learry/reset-font-size)
-     (define-key global-map (kbd "C-+") 'learry/increase-font-size)
-     (define-key global-map (kbd "C--") 'learry/decrease-font-size)
+     ;;;(define-key global-map (kbd "C-)") 'learry/reset-font-size)
+     ;;;(define-key global-map (kbd "C-+") 'learry/increase-font-size)
+     ;;;(define-key global-map (kbd "C--") 'learry/decrease-font-size)
 
      (learry/reset-font-size)
    #+END_SRC
@@ -458,11 +458,11 @@ The steps are as follows:
     textlint-rule-stop-words
   #+END_SRC
   3. Test if it works, create a file with a mistake
-  #+BEGIN_SRC bash
+  #+BEGIN_SRC bash :eval no
     echo "Mistakes were made" > file.txt
   #+END_SRC
   4. With the following command a warning should be output
-  #+BEGIN_SRC bash
+  #+BEGIN_SRC bash :eval no
     npx textlint --rule write-good --rule no-start-duplicated-conjunction --rule
     max-comma --rule terminology --rule period-in-list-item --rule
     period-in-list-item --rule unexpanded-acronym --rule abbr-within-parentheses
@@ -472,11 +472,12 @@ The steps are as follows:
   5. Then the below code can be inserted in =.emacs.d= config file and if
      =flycheck= has to be installed though.
 
+ --- IS CURRENTLY BROKEN, BECAUSE OF AN ERROR IN =TEXTLINT= ---
 I should be able to add rules to it. The config path is not correct so far but
 because no textlintrc is even available this should not be such a problem. For
 more info go [[https://github.com/textlint/textlint][here]].
 
-   #+BEGIN_SRC emacs-lisp
+   #+BEGIN_SRC emacs-lisp :eval no
     (flycheck-define-checker textlint
     "A linter for textlint."
     :command ("npx" "textlint"
