@@ -70,13 +70,13 @@ dropboxd &
 # dunst &
 
 # set wallpaper
-feh --bg-scale ~/Pictures/fox.png &
+feh --bg-scale ~/Pictures/blur.jpg &
 
 # start compton
 compton &
 
 # start redshift
-redshift -l 51.43004:-0.569947 &
+# redshift -l 51.43004:-0.569947 &
 
 # start window manager
 #exec i3
