@@ -69,9 +69,9 @@ super + y
 
 # lock laptop with i3
 super + shift + F1
-    betterlockscreen -l
+    ~/Documents/Scripts/lockscreen.sh # betterlockscreen -l
 
-# reboot laptop
+# suspend laptop
 super + shift + F2
     betterlockscreen -s
 
